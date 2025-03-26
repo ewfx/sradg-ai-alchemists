@@ -15,6 +15,9 @@ def load_data(file_path):
     Load CSV data into a pandas DataFrame.
     """
     try:
+        def load_data(filename):
+    file_path = os.path.join("raw", filename)
+    # return pd.read_csv(file_path)
         df = pd.read_csv(file_path)
         logging.info(f"Data loaded successfully from {file_path}")
         return df
